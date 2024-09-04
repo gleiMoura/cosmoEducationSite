@@ -1,0 +1,100 @@
+[
+    {
+        "site": "https://gleimoura.github.io/fashionProject/",
+        "text": "Projeto de uma loja que fabrica roupas personalizáveis.",
+        "title": "FashionDriven",
+        "subtitle": "HTML, CSS, API",
+        "type": "frontend"
+    },
+    {
+        "site": "https://gleimoura.github.io/projeto3-driveneats/",
+        "subtitle": "JavaScript, HTML e CSS",
+        "text": "Projeto que visou desenvolver um site de pedido de comidas rápidas.",
+        "title": "DrivenEats",
+        "type": "frontend"
+    },
+    {
+        "site": "https://gleimoura.github.io/projeto4-parrotscardgame/",
+        "subtitle": "JavaScript, HTML e CSS",
+        "text": "Um jogo da memória temático com aleatoridade, efeitos e transição, responsividade e papagaios dançantes.",
+        "title": "ParrotsCardGame",
+        "type": "frontend"
+    },
+    {
+        "site": "https://projeto9-cineflex-self-kappa.vercel.app/",
+        "subtitle": "ReactJS e uso de API",
+        "text": "Single-Page Application (SPA) para um cinema, usando React Router!",
+        "title": "CineFlex",
+        "type": "frontend"
+    },
+    {
+        "site": "https://projeto8-zaprecall-six-xi.vercel.app/",
+        "subtitle": "ReactJS",
+        "text": "Flashcards são cartões de contém uma pergunta/afirmação na sua frente e uma resposta atrás.",
+        "title": "ZapRecall",
+        "type": "frontend"
+    },
+    {
+        "site": "https://projeto10-trackit-psi-pink.vercel.app/",
+        "subtitle": "ReactJS com ContextAPI",
+        "text": "Aplicação completa de acompanhamento de hábitos! Com direito a cadastro, login e muitas bibliotecas!",
+        "title": "TrackIt",
+        "type": "frontend"
+    },
+    {
+        "site": "https://gleimoura.github.io/projeto11-tweteroo-front/",
+        "subtitle": "ReactJS",
+        "text": "Front End do projeto Tweetero.",
+        "title": "Twitteroo",
+        "type": "frontend" 
+    },
+    {
+        "subtitle": "Express e Javascript",
+        "text": "Projeto para construir uma API Rest simpres com deploy no Render.",
+        "site": "https://github.com/gleiMoura/projeto11-tweteroo",
+        "title": "Twitteroo",
+        "type": "backend"
+    },
+    {
+        "text": "Projeto de um ecommerce de calçados!",
+        "subtitle": "Express e MongoDB",
+        "site": "https://github.com/gleiMoura/projeto14-sapatin-back",
+        "title": "Sapatin",
+        "type": "backend"
+    },
+    {
+        "text": "API de cartões de benefícios. A API é responsável pela criação, recarga, ativação, assim como o processamento de compras.",
+        "title": "Valex",
+        "subtitle": "PostgreSQL e Express",
+        "site": "https://github.com/gleiMoura/projeto18-valex",
+        "type": "backend"
+    },
+    {
+        "text": "Neste projeto desenvolvi um gerenciador de senha que utiliza Arquitetura em Camadas (controllers, middlewares, repositories, router, services).",
+        "title": "DrivenPass",
+        "subtitle": "Prisma, Express, Typescript, PostgreSQL",
+        "site": "https://github.com/gleiMoura/Drivenpass",
+        "type": "backend"
+    },
+    {
+        "site": "https://github.com/gleiMoura/ApiUol",
+        "text": "Back End do projeto Pate Papo Uol",
+        "title": "BatePapoUol API",
+        "subtitle": "Express, MongoDB, TYPESCRIPT, nodejs, JEST",
+        "type": "backend"
+    },
+    {
+        "site": "https://frontuol.onrender.com/",
+        "text": "Simulação do Pate Papo Uol, um clássico pate papo onde usuários podiam conversar em tempo real.",
+        "title": "BatePapoUol",
+        "subtitle": "REACT, REACT router, styled-components, TYPESCRIPT, nodejs",
+        "type": "frontend"
+    },
+    {
+        "site": "https://github.com/gleiMoura/frontUol",
+        "text": "Simulação do Pate Papo Uol, um clássico pate papo onde usuários podiam conversar em tempo real.",
+        "title": "Github frontBatePapoUol",
+        "subtitle": "HTML, CSS, API",
+        "type": "backend"
+    }
+]
