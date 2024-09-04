@@ -37,6 +37,8 @@ const HeaderMain = styled.header`
     height: 80px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     position: fixed;
+    top: 0;
+    left: 0;
     padding: 30px;
     box-sizing: border-box;
     display: flex;

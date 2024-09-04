@@ -50,6 +50,7 @@ export const Presentation: FC = () => {
 const Main = styled.main<{ mode: boolean }>`
     width: 100%;
     height: auto;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,6 +59,7 @@ const Main = styled.main<{ mode: boolean }>`
 
     .image {
         width: 100%;
+        padding-top: 45px;
         display: flex;
         justify-content: center;
         align-items: center;
