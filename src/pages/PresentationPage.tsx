@@ -42,29 +42,52 @@ export const Presentation: FC = () => {
                     <img src={mode ? IDark : IWhite} width={'53%'} /> :
                     <img src={mobile} width="100%" className="short" />}
             </div>
-
+            <a className="calendar" target="_blank" href="https://calendar.app.google/dSLjW2YSMAfPSLuN6">
+                Agendar Aula
+            </a>
         </Main>
     )
 };
 
 const Main = styled.main<{ mode: boolean }>`
     width: 100%;
-    height: auto;
+    height: calc(100vh + 80px);
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color: ${(props) => props.mode ? "#21272F" : "white"};
 
     .image {
-        width: 100%;
-        padding-top: 45px;
+        width: 90%;
+        padding-top: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 30px;
         box-sizing: border-box;
+   }
+
+   .calendar {
+        width: 300px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        border-radius: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-family: 'Roboto';
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer
+   }
+
+   .calendar:hover{
+        background-color: #F2C744;
+        color: black
    }
 `
 
