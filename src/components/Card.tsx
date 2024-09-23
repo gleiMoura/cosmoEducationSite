@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import styled from "styled-components";
 
 interface CardProps {
-    title: string,
+    title?: string,
     subtitle?: string,
     text?: string,
     image?: string,
@@ -11,15 +11,22 @@ interface CardProps {
     color?: string,
     border?: string,
     siteLink?: string,
-    githubLink?: string
+    githubLink?: string,
+    width?: string,
+    height?: string
 };
 
 const Card: FC<CardProps> = ({
-    title, subtitle, text, image, alt, component, color, border, siteLink, githubLink
+    width, height, title, subtitle, text, image, alt, component, color, border, siteLink, githubLink
 }) => {
     return (
-        <CardMain style={{ backgroundColor: color, border: `2px solid ${border}` }}>
-            <h2>{title}</h2>
+        <CardMain style={{
+            backgroundColor: color,
+            border: `2px solid ${border}`,
+            width: width || '100%',
+            height: height || "90px"
+        }}>
+            {title && <h1>{title}</h1>}
             {subtitle && <h3>Tecnologias: {subtitle}</h3>}
             {image && <img src={image} alt={alt} />}
             {component && component}
@@ -33,8 +40,6 @@ const Card: FC<CardProps> = ({
 export default Card;
 
 const CardMain = styled.section`
-    width: 380px;
-    height: 400px;
     margin: 10px 0;
     color: black;
     font-family: "Roboto";
