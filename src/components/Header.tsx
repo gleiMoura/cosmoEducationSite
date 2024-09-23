@@ -16,7 +16,10 @@ const Header: FC<HeaderProps> = ({ changeMode, mode }) => {
                     document.getElementById("presentation")
                         ?.scrollIntoView({ behavior: "smooth" })
                 }}>Início</a>
-                <a>diferenciais</a>
+                <a onClick={() => {
+                    document.getElementById("differences")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                }}>diferenciais</a>
                 <a>O que falam</a>
                 <a>planos</a>
                 <a>apresentação</a>
