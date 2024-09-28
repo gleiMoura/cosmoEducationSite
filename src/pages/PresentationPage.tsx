@@ -51,15 +51,15 @@ export const Presentation: FC = () => {
                                     Professor de física, matemática e química dedicado a fazer meus alunos atingirem potencial máximo nos estudos.
                                 </h2>
                                 <div className="curiousity">
-                                    <FaArrowCircleRight color={theme.colors.purple} size={25} />
+                                    <FaArrowCircleRight className="icon" />
                                     <p>Residente da cidade maravilhosa</p>
                                 </div>
                                 <div className="curiousity">
-                                    <FaArrowCircleRight color={theme.colors.purple} size={25} />
+                                    <FaArrowCircleRight className="icon" />
                                     <p>Apaixonado por corrida de rua</p>
                                 </div>
                                 <div className="curiousity">
-                                    <FaArrowCircleRight  size={25} />
+                                    <FaArrowCircleRight  className="icon" />
                                     <p>Pai de 2 gatos</p>
                                 </div>
                             </div>
@@ -167,5 +167,10 @@ const Component = styled.div`
         top: 0;
         right: 10px;
 
+    }
+
+    .icon{
+        font-size: 25px;
+        color: ${theme.colors.purple}
     }
 `;
