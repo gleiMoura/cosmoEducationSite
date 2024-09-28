@@ -13,18 +13,20 @@ interface CardProps {
     siteLink?: string,
     githubLink?: string,
     width?: string,
-    height?: string
+    height?: string,
+    boxShadow?: string
 };
 
 const Card: FC<CardProps> = ({
-    width, height, title, subtitle, text, image, alt, component, color, border, siteLink, githubLink
+    width, height, title, subtitle, text, image, alt, component, color, border, siteLink, githubLink, boxShadow
 }) => {
     return (
         <CardMain style={{
             backgroundColor: color,
             border: `2px solid ${border}`,
             width: width || '100%',
-            height: height || "90px"
+            height: height || "90px",
+            boxShadow: boxShadow || "5px 5px 10px rgba(0, 0, 0, 0.5)"
         }}>
             {title && <h1>{title}</h1>}
             {subtitle && <h3>Tecnologias: {subtitle}</h3>}
@@ -53,9 +55,6 @@ const CardMain = styled.section`
     align-items: center;
     border: 2px solid transparent;
     cursor: pointer;
-    &:hover{
-        border-color: #20E5F6;
-    }
 
     img{
         width: 100%;
