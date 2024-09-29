@@ -26,7 +26,7 @@ const Header: FC<HeaderProps> = ({ changeMode, mode }) => {
                         ?.scrollIntoView({ behavior: "smooth" })
                 }}>planos</a>
                 <a onClick={() => {
-                    document.getElementById("informations")
+                    document.getElementById("information")
                         ?.scrollIntoView({ behavior: "smooth" })
                 }}>informações úteis</a>
             </div>
