@@ -1,14 +1,22 @@
 import { FC, useEffect, useState, useContext } from "react"
 import { FaArrowCircleRight } from "react-icons/fa";
+import { FaPerson } from "react-icons/fa6";
+import { MdLiveTv } from "react-icons/md";
+import { MdLibraryBooks } from "react-icons/md";
 import { ModeContext } from "../contexts/ModeContext";
 import { theme } from "../theme";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Card from "../components/Card";
+import { Button } from "../components/Button";
 
 export const Presentation: FC = () => {
     const modeContext = useContext(ModeContext);
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const phoneNumber = "5521990230279";
+    const message = "Olá! Gostaria de saber mais as aulas";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     useEffect(() => {
         function resize() {
@@ -59,7 +67,7 @@ export const Presentation: FC = () => {
                                     <p>Apaixonado por corrida de rua</p>
                                 </div>
                                 <div className="curiousity">
-                                    <FaArrowCircleRight  className="icon" />
+                                    <FaArrowCircleRight className="icon" />
                                     <p>Pai de 2 gatos</p>
                                 </div>
                             </div>
@@ -72,11 +80,39 @@ export const Presentation: FC = () => {
                     width="500px"
                     height="400px"
                     color="white"
+                    component={
+                        <Component>
+                            <div className="diferential_box">
+                                <h1>
+                                    Diferencial das minhas mentorias
+                                </h1>
+                                <div className="diferential">
+                                    <FaPerson className="diferential_icon" />
+                                    <section>
+                                        <h2>FOCO TOTAL NO ALUNO</h2>
+                                        <p>Por isso as aulas são individualizadas.</p>
+                                    </section>
+                                </div>
+                                <div className="diferential">
+                                    <MdLiveTv className="diferential_icon" />
+                                    <section>
+                                        <h2>AS AULAS SÃO AO VIVO</h2>
+                                        <p>Chega de aulas estáticas! Aqui você pode tirar dúvidas em tempo real.</p>
+                                    </section>
+                                </div>
+                                <div className="diferential">
+                                    <MdLibraryBooks className="diferential_icon" />
+                                    <section>
+                                        <h2>LISTAS DE EXERCÍCIO</h2>
+                                        <p>São elaboradas de acordo com seu objetivo e conhecimento na disciplina.</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </Component>
+                    }
                 />
             </div>
-            <a className="calendar_button" target="_blank" href="https://calendar.app.google/dSLjW2YSMAfPSLuN6">
-                Agendar Aula
-            </a>
+            <Button text="Entrar em contato" link={whatsappURL} />
         </Main>
     )
 };
@@ -127,7 +163,7 @@ const Component = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     position: relative;
 
@@ -143,11 +179,13 @@ const Component = styled.div`
         font-weight: 500;
         text-align: center;
     }
+
     h2{
         font-size: 1.2rem;
-        font-weight: 300;
+        font-weight: 400;
         text-align: center;
     }
+
     p{
         font-size: 1rem;
         text-align: start;
@@ -162,9 +200,9 @@ const Component = styled.div`
     }
 
     .photo{
-        width: 150px;
+        width: 130px;
         position: absolute;
-        top: 0;
+        bottom: 0;
         right: 10px;
 
     }
@@ -172,5 +210,25 @@ const Component = styled.div`
     .icon{
         font-size: 25px;
         color: ${theme.colors.purple}
+    }
+
+    .diferential_icon{
+        font-size: 35px;
+        color: ${theme.colors.purple};
+    }
+
+    .diferential{
+        display: flex;
+        margin-top: 20px;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 `;
