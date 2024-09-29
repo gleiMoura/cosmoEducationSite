@@ -14,19 +14,28 @@ interface CardProps {
     githubLink?: string,
     width?: string,
     height?: string,
-    boxShadow?: string
+    maxWidth?: string,
+    maxHeight?: string,
+    padding?: string,
+    boxShadow?: string,
+    margin?: string,
+    toggleSides?: boolean
 };
 
 const Card: FC<CardProps> = ({
-    width, height, title, subtitle, text, image, alt, component, color, border, siteLink, githubLink, boxShadow
+    width, height, title, subtitle, text, image, alt, component, color, border, siteLink, githubLink, boxShadow, margin, padding, maxWidth, maxHeight, toggleSides
 }) => {
     return (
-        <CardMain style={{
+        <CardMain className={toggleSides ? "item" : ""} style={{
             backgroundColor: color,
             border: `2px solid ${border}`,
             width: width || '100%',
             height: height || "90px",
-            boxShadow: boxShadow || "5px 5px 10px rgba(0, 0, 0, 0.5)"
+            boxShadow: boxShadow || "5px 5px 10px rgba(0, 0, 0, 0.5)",
+            margin: margin || "10px",
+            padding: padding || "15px",
+            maxWidth: maxWidth,
+            maxHeight: maxHeight
         }}>
             {title && <h1>{title}</h1>}
             {subtitle && <h3>Tecnologias: {subtitle}</h3>}
@@ -42,12 +51,10 @@ const Card: FC<CardProps> = ({
 export default Card;
 
 const CardMain = styled.section`
-    margin: 10px 0;
     color: black;
     font-family: "Roboto";
     font-weight: 500;
     border-radius: 10px;
-    padding: 15px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -79,5 +86,15 @@ const CardMain = styled.section`
 
     @media (max-width: 400px) {
         width: 320px;
+    }
+
+    .toggle_sides{
+        .item:nth-child(odd) {
+      justify-content: flex-start; /* Alinha os itens ímpares à esquerda */
+    }
+
+    .item:nth-child(even) {
+      justify-content: flex-end; /* Alinha os itens pares à direita */
+    }
     }
 `
