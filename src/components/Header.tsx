@@ -18,13 +18,17 @@ const Header: FC<HeaderProps> = ({ changeMode, mode }) => {
                         ?.scrollIntoView({ behavior: "smooth" })
                 }}>Início</a>
                 <a onClick={() => {
-                    document.getElementById("differences")
+                    document.getElementById("recomendations")
                         ?.scrollIntoView({ behavior: "smooth" })
-                }}>diferenciais</a>
-                <a>O que falam</a>
-                <a>planos</a>
-                <a>apresentação</a>
-                <a>informações úteis</a>
+                }}>O que falam</a>
+                <a onClick={() => {
+                    document.getElementById("plans")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                }}>planos</a>
+                <a onClick={() => {
+                    document.getElementById("informations")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                }}>informações úteis</a>
             </div>
             <Mode mode={mode} onClick={() => {
                 changeMode()
@@ -48,6 +52,7 @@ const HeaderMain = styled.header`
     justify-content: space-between;
     align-items: center;
     background-color: ${theme.colors.black};
+    z-index: 111;
 
     .links {
         width: 100%;
