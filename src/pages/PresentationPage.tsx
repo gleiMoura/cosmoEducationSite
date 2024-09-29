@@ -50,7 +50,7 @@ export const Presentation: FC = () => {
                     height="400px"
                     color="white"
                     component={
-                        <Component>
+                        <Component mode={mode}>
                             <div className="info_box">
                                 <h1>
                                     Quem sou eu?
@@ -81,7 +81,7 @@ export const Presentation: FC = () => {
                     height="400px"
                     color="white"
                     component={
-                        <Component>
+                        <Component mode={mode}>
                             <div className="diferential_box">
                                 <h1>
                                     Diferencial das minhas mentorias
@@ -159,7 +159,7 @@ const Main = styled.main<{ mode: boolean }>`
    }
 `;
 
-const Component = styled.div`
+const Component = styled.div<{ mode: boolean }>`
     width: 100%;
     height: 100%;
     display: flex;
@@ -209,12 +209,12 @@ const Component = styled.div`
 
     .icon{
         font-size: 25px;
-        color: ${theme.colors.purple}
+        color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple}
     }
 
     .diferential_icon{
         font-size: 35px;
-        color: ${theme.colors.purple};
+        color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple}
     }
 
     .diferential{

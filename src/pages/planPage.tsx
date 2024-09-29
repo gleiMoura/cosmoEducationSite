@@ -18,7 +18,7 @@ export const Plans: FC = () => {
             <Title title="Planos disponíveis" />
             <Cards>
                 <Card color={mode ? "gray" : "white"} margin="60px 0 0 0" toggleSides maxWidth="600px" height="170px" padding="0px" component={
-                    <Content>
+                    <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
                                 <p className="category">PLANO BIMESTRAL</p>
@@ -52,7 +52,7 @@ export const Plans: FC = () => {
                     </Content>
                 } />
                 <Card color={mode ? "gray" : "white"} toggleSides height="170px" maxWidth="600px" padding="0px" component={
-                    <Content>
+                    <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
                                 <p className="category">PLANO BIMESTRAL</p>
@@ -88,7 +88,7 @@ export const Plans: FC = () => {
                     </Content>
                 } />
                 <Card color={mode ? "gray" : "white"} toggleSides height="170px" maxWidth="600px" padding="0px" component={
-                    <Content>
+                    <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
                                 <p className="category">PLANO BIMESTRAL</p>
@@ -142,7 +142,7 @@ const Main = styled.main<{ mode: boolean }>`
     align-items: center;
     background-size: 'cover';
     background-position: 'center';
-    background-color: ${(props) => props.mode ? "none" : theme.colors.green};
+    background-color: ${(props) => props.mode ? "#21272F" : theme.colors.green};
 `;
 
 const Cards = styled.div`
@@ -159,7 +159,7 @@ const Cards = styled.div`
     }
 `;
 
-const Content = styled.div`
+const Content = styled.div<{ mode: boolean }>`
     width: 100%;
     height: 100%;
     display: flex;
@@ -191,7 +191,7 @@ const Content = styled.div`
         width: 150px;
         height: auto;
         padding: 10px;
-        background-color: ${theme.colors.purple};
+        background-color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple};
         border-radius: 10px;
         color: black;
         position: absolute;
@@ -203,7 +203,7 @@ const Content = styled.div`
         font-size: 1rem;
         font-weight: 800;
         align-items: first baseline;
-        color: ${theme.colors.yellow};
+        color: ${(props) => props.mode ? 'black' : theme.colors.yellow };
     }
 
     span{
