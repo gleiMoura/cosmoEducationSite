@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Presentation } from "./pages/PresentationPage";
-import { Stack } from "./pages/StackPage";
+import { Recomendation } from "./pages/recomendationsPage";
 import { ModeProvider } from "./contexts/ModeContext";
-import { Diferencial } from "./pages/diferencialPage";
+import { Plans } from "./pages/planPage";
 import "./app.css";
 
 
@@ -11,8 +11,8 @@ const App: FC = () => {
     <>
       <ModeProvider>
         <Presentation />
-        <Diferencial />
-        <Stack />
+        <Recomendation />
+        <Plans />
       </ModeProvider>
     </>
   )
