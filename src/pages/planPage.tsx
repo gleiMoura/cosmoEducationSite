@@ -17,7 +17,7 @@ export const Plans: FC = () => {
         <Main mode={mode} id="plans">
             <Title title="Planos disponíveis" />
             <Cards>
-                <Card color={mode ? "gray" : "white"} margin="60px 0 0 0" toggleSides maxWidth="600px" height="170px" padding="0px" component={
+                <Card color={mode ? "gray" : "white"} margin="80px 0 0 0" toggleSides maxWidth="600px" height="170px" padding="0px" component={
                     <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
@@ -87,7 +87,7 @@ export const Plans: FC = () => {
                         </div>
                     </Content>
                 } />
-                <Card color={mode ? "gray" : "white"} toggleSides height="170px" maxWidth="600px" padding="0px" component={
+                <Card color={mode ? "gray" : "white"} height="170px" maxWidth="600px" padding="0px" component={
                     <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
@@ -152,7 +152,7 @@ const Cards = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 100px;
 
     .photo{
         width: 400px;
@@ -195,8 +195,13 @@ const Content = styled.div<{ mode: boolean }>`
         border-radius: 10px;
         color: black;
         position: absolute;
-        top: -40px;
+        top: -50px;
         right: -60px;
+
+        @media(max-width: 600px){
+            top:-80px;
+            right: 0px;
+        }
     }
 
     .value{
