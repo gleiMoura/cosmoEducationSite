@@ -1,4 +1,4 @@
-import { FC, useEffect, useContext } from "react"
+import { FC, useContext } from "react"
 import { FaArrowCircleRight } from "react-icons/fa";
 import { FaPerson } from "react-icons/fa6";
 import { MdLiveTv } from "react-icons/md";
