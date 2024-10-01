@@ -67,34 +67,7 @@ const CardMain = styled.section`
         width: 100%;
     }
 
-    h2{
-        background-color: white;
-        padding: 5px;
-        box-sizing: border-box;
-        border-radius: 8px;
-        font-weight: 500;
-        font-size: 1.5rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    
-    p{
-        font-weight: 400;
-        font-size: 1rem;
-        text-align: start;
-    }
-
     @media (max-width: 400px) {
         width: 320px;
-    }
-
-    .toggle_sides{
-        .item:nth-child(odd) {
-      justify-content: flex-start; /* Alinha os itens ímpares à esquerda */
-    }
-
-    .item:nth-child(even) {
-      justify-content: flex-end; /* Alinha os itens pares à direita */
-    }
     }
 `
