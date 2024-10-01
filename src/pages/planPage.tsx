@@ -114,10 +114,10 @@ export const Plans: FC = () => {
                                 <CgArrowLongRightC className="icon" />
                             </div>
                             <p className="text">
-                                * 1 aula por semana via meet
+                                * 3 aula por semana via meet
                             </p>
                             <p className="text">
-                                * 1 lista de exercício por semana
+                                * 3 lista de exercício por semana
                             </p>
                             <p className="text">
                                 * Acesso ao whatsapp e instagram para tirar dúvidas frequentes.

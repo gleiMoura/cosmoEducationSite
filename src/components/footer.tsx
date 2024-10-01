@@ -9,7 +9,7 @@ export const Footer: FC = () => {
 
     return (
         <Content mode={mode}>
-            © 2024 CosmoEducation, todos os direitor reservados
+            © 2024 CosmoEducation, todos os direitos reservados
         </Content>
     )
 };
