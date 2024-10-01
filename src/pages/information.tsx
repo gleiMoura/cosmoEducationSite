@@ -52,7 +52,7 @@ const Main = styled.main<{ mode: boolean }>`
 `;
 
 const Content = styled.div<{ mode: boolean }>`
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     height: 100%;
     display: flex;
@@ -61,7 +61,7 @@ const Content = styled.div<{ mode: boolean }>`
     font-family: 'Roboto';
     margin: 10px 0;
     border-radius: 10px;
-    background-color: ${(props) => props.mode ? 'black' : theme.colors.background};
+    background-color: ${(props) => props.mode ? 'black' : theme.colors.green};
 
     p{
         font-size: 1.2rem;
