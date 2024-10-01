@@ -131,6 +131,7 @@ const Content = styled.div`
     p{
         font-size: 1rem;
         margin: 4px 0;
+        font-weight: 400;
     }
 
     .icon{
