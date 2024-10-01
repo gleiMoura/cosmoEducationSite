@@ -46,7 +46,8 @@ export const Presentation: FC = () => {
             <Header changeMode={changeMode} mode={mode} />
             <div className="cards">
                 <Card
-                    width="500px"
+                    width="90%"
+                    maxWidth="500px"
                     height="400px"
                     color="white"
                     component={
@@ -77,7 +78,8 @@ export const Presentation: FC = () => {
 
                 />
                 <Card
-                    width="500px"
+                    width="90%"
+                    maxWidth="500px"
                     height="400px"
                     color="white"
                     component={
@@ -119,7 +121,7 @@ export const Presentation: FC = () => {
 
 const Main = styled.main<{ mode: boolean }>`
     width: 100%;
-    height: calc(100vh + 80px);
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -127,12 +129,16 @@ const Main = styled.main<{ mode: boolean }>`
     background-color: ${(props) => props.mode ? "#21272F" : theme.colors.green};
 
     .cards {
-        width: 90%;
+        width: 100%;
         padding-top: 100px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         box-sizing: border-box;
+
+        @media(max-width: 600px) {
+            flex-direction: column;
+        }
    }
 
    .calendar_button {
@@ -178,17 +184,20 @@ const Component = styled.div<{ mode: boolean }>`
         font-size: 1.5rem;
         font-weight: 500;
         text-align: center;
+        margin-bottom: 20px;
     }
 
     h2{
         font-size: 1.2rem;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 10px;
     }
 
     p{
         font-size: 1rem;
-        text-align: start;
+        text-align: center;
+        font-weight: 400;
     }
 
     .curiousity{
@@ -214,21 +223,38 @@ const Component = styled.div<{ mode: boolean }>`
 
     .diferential_icon{
         font-size: 35px;
+        margin-left: 0px;
         color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple}
     }
 
     .diferential{
         display: flex;
-        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
     }
 
     section{
+        width: 250px;
+        height: 60px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        width: 300px;
-        padding: 0 20px;
         box-sizing: border-box;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    @media(max-width: 600px){
+        h1{
+            font-size: 1.2rem;
+        };
+        h2{
+            font-size: 1rem;
+        };
+        p{
+            font-size: 0.8rem;
+        }
+        
     }
 `;
