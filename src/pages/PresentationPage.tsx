@@ -1,4 +1,4 @@
-import { FC, useEffect, useState, useContext } from "react"
+import { FC, useEffect, useContext } from "react"
 import { FaArrowCircleRight } from "react-icons/fa";
 import { FaPerson } from "react-icons/fa6";
 import { MdLiveTv } from "react-icons/md";
@@ -12,25 +12,9 @@ import { Button } from "../components/Button";
 
 export const Presentation: FC = () => {
     const modeContext = useContext(ModeContext);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
     const phoneNumber = "5521990230279";
     const message = "Olá! Gostaria de saber mais as aulas";
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-
-    useEffect(() => {
-        function resize() {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', resize);
-
-        resize();
-
-        return () => {
-            window.removeEventListener('resize', resize);
-        }
-    }, []);
 
     if (!ModeContext) {
         throw new Error('ModeSwitcher deve ser usado dentro de um ModeProvider');
