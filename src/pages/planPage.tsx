@@ -142,7 +142,7 @@ const Main = styled.main<{ mode: boolean }>`
     align-items: center;
     background-size: 'cover';
     background-position: 'center';
-    background-color: ${(props) => props.mode ? "#21272F" : theme.colors.green};
+    background-color: ${(props) => props.mode ? theme.colors.week_black : theme.colors.white};
 `;
 
 const Cards = styled.div`
@@ -191,7 +191,7 @@ const Content = styled.div<{ mode: boolean }>`
         width: 150px;
         height: auto;
         padding: 10px;
-        background-color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple};
+        background-color: black;
         border-radius: 10px;
         color: black;
         position: absolute;
@@ -208,18 +208,18 @@ const Content = styled.div<{ mode: boolean }>`
         font-size: 1rem;
         font-weight: 800;
         align-items: first baseline;
-        color: ${(props) => props.mode ? 'black' : theme.colors.yellow };
+        color: ${theme.colors.yellow};
     }
 
     span{
         font-size: 0.8rem;
         margin-left: 8px;
-        color: ${theme.colors.yellow}
+        color: 'gray'
     }
 
     .category{
         font-size: 0.8rem;
-        color: black;
+        color: white;
         font-weight: 600;
     }
 

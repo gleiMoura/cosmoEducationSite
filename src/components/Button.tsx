@@ -33,7 +33,6 @@ const Main = styled.a`
         cursor: pointer;
 
         &:hover{
-        background-color: ${theme.colors.purple};
-        color: black;
+        color: ${theme.colors.week_black};
    }
 `

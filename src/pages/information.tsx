@@ -48,7 +48,7 @@ const Main = styled.main<{ mode: boolean }>`
     align-items: center;
     background-size: 'cover';
     background-position: 'center';
-    background-color: ${(props) => props.mode ? "none" : theme.colors.background};
+    background-color: ${(props) => props.mode ? "none" : 'white'};
 `;
 
 const Content = styled.div<{ mode: boolean }>`
@@ -61,7 +61,10 @@ const Content = styled.div<{ mode: boolean }>`
     font-family: 'Roboto';
     margin: 10px 0;
     border-radius: 10px;
-    background-color: ${(props) => props.mode ? 'black' : theme.colors.green};
+    background-color: ${(props) => props.mode ? 'black' : theme.colors.white};
+    border: black 1px solid;
+    box-sizing: border-box;
+
 
     p{
         font-size: 1.2rem;

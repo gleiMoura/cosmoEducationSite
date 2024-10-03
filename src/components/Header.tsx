@@ -53,16 +53,16 @@ const Header: FC<HeaderProps> = ({ changeMode, mode }) => {
 const HeaderMain = styled.header<{ mode: boolean }>`
     width: 100%;
     height: 80px;
+    padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.173);
     position: fixed;
     top: 0;
     left: 0;
-    padding: 30px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ${theme.colors.black};
+    background-color: ${(props) => props.mode ? theme.colors.black : theme.colors.yellow};
     z-index: 111;
 
     .links {
@@ -82,13 +82,13 @@ const HeaderMain = styled.header<{ mode: boolean }>`
         justify-content: space-between;
         align-items: center;
         border-radius: 10px;
-        color: white;
+        color: ${theme.colors.white};
         position: absolute;
         top: 80px;
     }
 
     a{
-        color: white;
+        color: ${(props) => props.mode ? theme.colors.white : theme.colors.black};
         font-weight: 500;
         font-size: 1rem;
         font-family: 'Roboto';

@@ -110,7 +110,7 @@ const Main = styled.main<{ mode: boolean }>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ${(props) => props.mode ? "#21272F" : theme.colors.green};
+    background-color: ${(props) => props.mode ? theme.colors.week_black : theme.colors.white};
 
     .cards {
         width: 100%;
@@ -123,29 +123,6 @@ const Main = styled.main<{ mode: boolean }>`
         @media(max-width: 600px) {
             flex-direction: column;
         }
-   }
-
-   .calendar_button {
-        width: 200px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px 0;
-        border-radius: 10px;
-        border: none;
-        background-color: ${theme.colors.yellow};
-        color: black;
-        font-family: 'Roboto';
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-decoration: none;
-        cursor: pointer
-   }
-
-   .calendar_button:hover{
-        background-color: ${theme.colors.purple};
-        color: black
    }
 `;
 
@@ -202,13 +179,13 @@ const Component = styled.div<{ mode: boolean }>`
 
     .icon{
         font-size: 25px;
-        color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple}
+        color: ${theme.colors.yellow}
     }
 
     .diferential_icon{
         font-size: 35px;
         margin-left: 0px;
-        color: ${(props) => props.mode ? theme.colors.yellow : theme.colors.purple}
+        color: ${theme.colors.yellow}
     }
 
     .diferential{
