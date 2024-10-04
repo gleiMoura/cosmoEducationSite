@@ -102,7 +102,7 @@ const Main = styled.main<{ mode: boolean }>`
     align-items: center;
     background-size: 'cover';
     background-position: 'center';
-    background-color: ${(props) => props.mode ? "none" : theme.colors.background};
+    background-color: ${(props) => props.mode ? "none" : theme.colors.white};
 `;
 
 const Cards = styled.div`
