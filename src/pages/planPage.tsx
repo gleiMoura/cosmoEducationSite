@@ -21,12 +21,12 @@ export const Plans: FC = () => {
                     <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
-                                <p className="category">PLANO BIMESTRAL</p>
-                                <p className="value">R$ 140,00 <span>mensal</span></p>
+                                <p className="category">PLANO TRIMESTRAL</p>
+                                <p className="value">R$ 240,00 <span>mensal</span></p>
                             </div>
                             <div className="trimestral">
-                                <p className="category">PLANO TRIMESTRAL</p>
-                                <p className="value">R$ 180,00 <span>mensal</span></p>
+                                <p className="category">PLANO SEMESTRAL</p>
+                                <p className="value">R$ 200,00 <span>mensal</span></p>
                             </div>
                         </div>
                         <div className="plan_info trilha">
@@ -55,12 +55,12 @@ export const Plans: FC = () => {
                     <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
-                                <p className="category">PLANO BIMESTRAL</p>
-                                <p className="value">R$ 360,00 <span>mensal</span></p>
+                                <p className="category">PLANO TRIMESTRAL</p>
+                                <p className="value">R$ 480,00 <span>mensal</span></p>
                             </div>
                             <div className="trimestral">
-                                <p className="category">PLANO TRIMESTRAL</p>
-                                <p className="value">R$ 280,00 <span>mensal</span></p>
+                                <p className="category">PLANO SEMESTRAL</p>
+                                <p className="value">R$ 400,00 <span>mensal</span></p>
                             </div>
                         </div>
                         <div className="plan_info jornada">
@@ -91,12 +91,12 @@ export const Plans: FC = () => {
                     <Content mode={mode}>
                         <div className="price_plan">
                             <div className="bimestral">
-                                <p className="category">PLANO BIMESTRAL</p>
-                                <p className="value">R$ 540,00 <span>mensal</span></p>
+                                <p className="category">PLANO TRIMESTRAL</p>
+                                <p className="value">R$ 720,00 <span>mensal</span></p>
                             </div>
                             <div className="trimestral">
-                                <p className="category">PLANO TRIMESTRAL</p>
-                                <p className="value">R$ 420,00 <span>mensal</span></p>
+                                <p className="category">PLANO SEMESTRAL</p>
+                                <p className="value">R$ 600,00 <span>mensal</span></p>
                             </div>
                         </div>
                         <div className="plan_info maratona">
