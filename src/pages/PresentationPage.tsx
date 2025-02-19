@@ -170,7 +170,7 @@ const Component = styled.div<{ mode: boolean }>`
     }
 
     .photo{
-        width: 130px;
+        width: 110px;
         position: absolute;
         bottom: 0;
         right: 10px;
